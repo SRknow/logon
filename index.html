@@ -18,8 +18,18 @@
         <li><a href="#personal">Personal Blog</a></li>
       </ul>
       <div class="auth-buttons">
+        <!-- Login/Register Buttons -->
         <button id="showLogin">Login</button>
         <button id="showRegister">Register</button>
+
+        <!-- User Icon Menu (after login) -->
+        <div id="userMenu" class="user-menu" style="display:none;">
+          <img src="https://img.icons8.com/ios-glyphs/30/ffffff/user--v1.png" alt="User" class="user-icon">
+          <div class="dropdown">
+            <p id="profileName"></p>
+            <button id="logoutBtn">Logout</button>
+          </div>
+        </div>
       </div>
     </nav>
   </header>
@@ -38,7 +48,6 @@
   <!-- Personal Homepage with Blog -->
   <div id="homePage" style="display:none;">
     <h2>Welcome, <span id="userName"></span>!</h2>
-    <button id="logoutBtn">Logout</button>
 
     <div class="blog-section">
       <h3>Write a New Blog Post</h3>
