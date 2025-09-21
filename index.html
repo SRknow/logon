@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Personal Blog</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="logo"><h1>MyBlog</h1></div>
+    <nav>
+      <ul>
+        <li><a href="#latest">Latest Updates</a></li>
+        <li><a href="#friends">Making Friends</a></li>
+        <li><a href="#movies">Movies</a></li>
+        <li><a href="#tech">Tech</a></li>
+        <li><a href="#personal">Personal Blog</a></li>
+      </ul>
+      <div class="auth-buttons">
+        <button id="showLogin">Login</button>
+        <button id="showRegister">Register</button>
+      </div>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Welcome to My Personal Blog!</h2>
+    <p>Explore updates, movies, tech news, make friends, and share your stories.</p>
+  </section>
+
+  <section id="latest"><h2>Latest Updates</h2></section>
+  <section id="friends"><h2>Making Friends</h2></section>
+  <section id="movies"><h2>Movies</h2></section>
+  <section id="tech"><h2>Tech</h2></section>
+  <section id="personal"><h2>Personal Blog</h2></section>
+
+  <!-- Personal Homepage with Blog -->
+  <div id="homePage" style="display:none;">
+    <h2>Welcome, <span id="userName"></span>!</h2>
+    <button id="logoutBtn">Logout</button>
+
+    <div class="blog-section">
+      <h3>Write a New Blog Post</h3>
+      <input type="text" id="blogTitle" placeholder="Title">
+      <textarea id="blogContent" placeholder="Write your content here..."></textarea>
+      <button id="submitBlog">Post Blog</button>
+    </div>
+
+    <div class="user-blogs">
+      <h3>Your Blog Posts</h3>
+      <div id="blogList"></div>
+    </div>
+  </div>
+
+  <!-- Login/Register Modal -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <div id="loginForm" class="form-box">
+        <h2>Login</h2>
+        <input type="email" id="loginEmail" placeholder="Email" required>
+        <input type="password" id="loginPassword" placeholder="Password" required>
+        <button id="loginBtn">Login</button>
+        <p id="loginError" class="error-msg"></p>
+        <button class="close-modal" id="closeLogin">Close</button>
+      </div>
+
+      <div id="registerForm" class="form-box" style="display:none;">
+        <h2>Register</h2>
+        <input type="text" id="registerName" placeholder="Name" required>
+        <input type="email" id="registerEmail" placeholder="Email" required>
+        <input type="password" id="registerPassword" placeholder="Password" required>
+        <button id="registerBtn">Register</button>
+        <p id="registerError" class="error-msg"></p>
+        <button class="close-modal" id="closeRegister">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>
